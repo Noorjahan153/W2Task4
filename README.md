@@ -9,7 +9,7 @@
 * Volumes & Persistence
 * Docker compose
 
-**Step 1** — How apps worked earlier (NO Docker)
+**How apps worked earlier (NO Docker)**
 
 Imagine you create an application:
 
@@ -60,7 +60,7 @@ Each VM has: Its own os, Huge size (GBs),Slow boot.
 VM Structure-Hardware,Host os,Hyperviser,Guest OS,Application
 VM Problems-Heavy,slow,Expensive,Each VM duplicates OS
 
-**Step 3** - **Container(Docker)**
+ **Container(Docker)**
 Docker said - Why carry Full OS Every time?
 Instead: Use Host os Kernel and Only package: App+Libraries---> **These are called Containers**
 
@@ -132,8 +132,9 @@ What is Containerization?---> Application Containerization is an OS-level Virtua
 
 **What is Docker?** --> Docker is a computer program that performs operating system level virtualization,also known as **Containerization**. It was first released in 2013 and developed by docker,Inc.Docker is used to run software packages called **Containers**.
 
-          Docker container life cycle
+This diagram explains the life cycle of a Docker container and its interaction with Docker Hub and Docker Engine.
 
+```
                   Docker Hub
                       ▲
                       | Push
@@ -149,10 +150,20 @@ What is Containerization?---> Application Containerization is an OS-level Virtua
     -----------------------------------------
     |                |                     |
   Run                 Stop                    Delete
-  
-                      
+```
 
-🌐 Components of Docker Ecosystem
+### Explanation
+
+1. **Push**: Upload your Docker images from local Docker Engine to Docker Hub.
+2. **Pull**: Download images from Docker Hub to your local Docker Engine.
+3. **Docker Images**: Immutable templates used to create containers.
+4. **Containers stages**:
+
+   * **Run**: Start a container from an image.
+   * **Stop**: Stop a running container.
+   * **Delete**: Remove the stop
+
+🌐 **Components of Docker Ecosystem**
 
 * Docker Hub -->Docker Hub is a central public docker registry. It can store custom docker images.The service is free, but your images would be public. It requires username/password.
 
@@ -253,6 +264,7 @@ Lists - YAML lists are a sequence of objects.
 
 **Sample Writing a Docker Compose File**
 
+```yaml
 version: "3"
 
 services:
@@ -260,6 +272,10 @@ services:
     image: nginx
     ports:
       - "80:80"
+```
+
+> 💡 This file will run an Nginx web server accessible on port 80 of your host machine.
+
 
 Installing Docker Compose(Commands):
 
