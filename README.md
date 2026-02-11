@@ -1,4 +1,4 @@
-**Agenda**
+**AGENDA**
 
 * Explain the problem Docker solves
 * Virtual Machines vs Docker
