@@ -40,7 +40,21 @@ Also:
 * Servers waste resources
 * Scaling is hard
 
-**Step 2** — Virtual Machines Came - VMs solved this by packing: App+Libraries+Full os 
+  Virtual Machines vs Docker
+
+Virtual Machines:
+- Heavy
+- Full Guest OS
+- Slow boot
+- Large size (GBs)
+
+Docker Containers:
+- Lightweight
+- No Guest OS
+- Fast startup
+- Small size (MBs)
+
+— Virtual Machines Came - VMs solved this by packing: App+Libraries+Full os 
 Each VM has: Its own os, Huge size (GBs),Slow boot.
 
 VM Structure-Hardware,Host os,Hyperviser,Guest OS,Application
@@ -135,10 +149,8 @@ What is Containerization?---> Application Containerization is an OS-level Virtua
     -----------------------------------------
     |                |                     |
   Run              Stop                  Delete
-    |                                     |
-    ---------------------------------------
+  
                       
-
 
 🌐 Components of Docker Ecosystem
 
@@ -167,6 +179,8 @@ What is Containerization?---> Application Containerization is an OS-level Virtua
 * **docker kill <container-id>** -->This command kills the conatiner by stopping its execution immediately. The difference between **docker kill** and **docker stop** : 'Docker stop' gives the container time to shutdown gracefully;whereas,in situations when it is taking too much time for getting the conatiner to stop,one can opt to kill it. Rg:docker kill 233e926091f3
 * **docker rm <container-id>** --> To Remove a stopped container from the system,we use the **rm** command eg:docker rm 233e926091f3
 * **docker rmi <image-id>** --> To remove an image from the system, we use the rmi command.
+
+  
 
 
 
