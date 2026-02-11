@@ -156,17 +156,19 @@ What is Containerization?---> Application Containerization is an OS-level Virtua
 
   **Common Docker commands**
 
- docker --version
-docker pull <image-name>
-docker images
-docker run <image-name>
-docker ps
-docker ps -a
-docker exec <container-id>
-docker stop <container-id>
-docker kill <container-id>
-docker rm <container-id>
-docker rmi <image-id>
+* **docker --version** --> This command helps you know the installed version of the docker software on the system.
+* **docker pull <image-name>**-->This command helps you know the central docker repository.Eg: docker pull ubuntu
+* **docker images**-->This command helps you in listing all the docker images downloaded on your system.
+* **docker run <image-name>**-->This command helps in running containers from their image name. Eg:docker run -it -d ubuntu
+* **docker ps**-->This command helps in listing all the containers which are running in the system.
+* **docker ps -a**  -->if there are any stopped containers,they can be seen by adding the -a flag in this command.
+* **docker exec <container-id>**-->For logging into/accessing the container,one can use the exec command.Eg: docker exec -it 233e926091f3 bash
+* **docker stop <container-id>** -->For stopping a running conatainer,we use the stop command.Eg:docker stop 233e926091f3
+* **docker kill <container-id>** -->This command kills the conatiner by stopping its execution immediately. The difference between **docker kill** and **docker stop** : 'Docker stop' gives the container time to shutdown gracefully;whereas,in situations when it is taking too much time for getting the conatiner to stop,one can opt to kill it. Rg:docker kill 233e926091f3
+* **docker rm <container-id>** --> To Remove a stopped container from the system,we use the **rm** command eg:docker rm 233e926091f3
+* **docker rmi <image-id>** --> To remove an image from the system, we use the rmi command.
+
+
 
 
 
