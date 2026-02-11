@@ -52,13 +52,17 @@ Docker said - Why carry Full OS Every time?
 Instead: Use Host os Kernel and Only package: App+Libraries---> **These are called Containers**
 
 What is virtualization---> Virtualization is the process of running multiple virtual systems or resources on top of a single physical machine.These resources could be a storage device,network or even an operating system!!
-Eg: App         App          App
-     |           |            |   
-   Guest os    Guest os    Guest os
-                |            
-            Hypervisor
-                 |
+Eg: +---------+   +---------+   +---------+
+|  App    |   |  App    |   |  App    |
++---------+   +---------+   +---------+
+| GuestOS |   | GuestOS |   | GuestOS |
++-------------------------------------+
+              Hypervisor
++-------------------------------------+
           Host Operating System
++-------------------------------------+
+              Hardware
+
             
 
 
