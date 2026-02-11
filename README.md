@@ -200,13 +200,16 @@ In short:
 
 👉 Dockerfile = Blueprint of a Docker Image
 
---> FROM ubuntu - FROM defines the base image for the Docker image.
---> RUN apt-get update - RUN executes commands while building the Docker image.
---> RUN apt-get install -y apache2 
- * apt-get update updates package lists.
- * apt-get install -y apache2 installs the Apache web server.
+* FROM ubuntu - FROM defines the base image for the Docker image.
+* RUN apt-get update - RUN executes commands while building the Docker image.
+* RUN apt-get install -y apache2 
+
+   apt-get update updates package lists.
+
+   apt-get install -y apache2 installs the Apache web server.
+
 Each RUN creates a new layer in the Docker image.
---> ADD . /var/www/html - ADD copies files from the local system into the Docker image.
+* ADD . /var/www/html - ADD copies files from the local system into the Docker image.
 
    . → Current project folder (local system)
 
@@ -214,7 +217,7 @@ Each RUN creates a new layer in the Docker image.
 
 This copies all website files into Apache so it can serve them.
 👉 Without ADD, Apache runs but shows no webpage.
---> CMD apachectl -D FOREGROUND - CMD specifies the default command that runs when the container starts.
+* CMD apachectl -D FOREGROUND - CMD specifies the default command that runs when the container starts.
 
 This starts the Apache server and keeps it running in the foreground.
 
