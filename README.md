@@ -439,6 +439,9 @@ docker volume rm my_volume
 
 Docker makes it easy to run applications consistently across different environments. It is faster and lighter than virtual machines. By understanding Docker's architecture, commands, networking, volumes, and Docker Compose, we can manage applications efficiently and keep data persistent. Overall, Docker helps in easy deployment, scaling, and maintaining applications.
 
+**Task completed by Noorjahan.**
+
+
 
 
 
