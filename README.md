@@ -223,7 +223,35 @@ This starts the Apache server and keeps it running in the foreground.
 
 👉 If Apache runs in background, container stops.
 👉 Foreground keeps container alive.
+* Entrypoint - The Entrypoint keyword is used strictly to run commands the moment the container initializes. The difference between CMD and ENTRYPOINT , ENTRYPOINT will run irrespective of the fact whether the argument is specified or not.
 
+  ENTRYPOINT apachectl-D FOREGROUND
+* ENV - The ENV keyword is used to define environment variables in the conatainer runtime. Like ENV name DEVOPS PearThoughts
+
+  **DOCKER COMPOSE**
+
+"Compose is a tool for defining and running multi-container Docker applications.With compose, you use a YAML file to configure your application's services. Then, with a single command ,you create and start all the services from your configuration.Run docker-compose up and compose starts and runs your entire app".
+
+**What are yaml files?**
+
+YAML is a superset of a JSON file.There are only two types of structures in YAML which you need to know to get started: **MAPS and Lists**
+
+MAPS- when we map a key to a value in YAML files, they are termed as Maps.
+* <Key><Value> eg : Name:Pearlthoughts
+                    Course:Devops
+
+Lists - YAML lists are a sequence of objects.
+  Args
+  * arg 1
+  * arg 2
+  * arg 3
+->Eg:args
+    - sleep
+    - "1000"
+    - message
+    - "Bring back firefly!"
+
+**Sample Writing a Docker Compose File**
 
 
   
