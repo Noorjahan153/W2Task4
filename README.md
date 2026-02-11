@@ -130,51 +130,45 @@ What is Containerization?---> Application Containerization is an OS-level Virtua
                       |
                  Docker Images
                       |
-                   Containers
+                Containers stages
                       |
     -----------------------------------------
     |                |                     |
   Run              Stop                  Delete
     |                                     |
     ---------------------------------------
-                      |
-                   Build Image
-                      |
-                   Dockerfile
+                      
 
 
 🌐 Components of Docker Ecosystem
 
 * Docker Hub -->Docker Hub is a central public docker registry. It can store custom docker images.The service is free, but your images would be public. It requires username/password.
 
-* Docker Engine-->
-* Docker Engine is the heart of the docker ecosystem.
-* It is responsible for managing your container runtimes.
-* It works on top of operating system level.
-* It utilizes the kernel of the underlying OS.
+* Docker Engine--> Docker Engine is the heart of the docker ecosystem, It is responsible for managing your container runtimes,It works on top of operating system level,It utilizes the kernel of the underlying OS.
 
-* Docker Images-->
-* Docker Image is like the template of a container.
-* It is created in layers.
-* Any new changes in the image results in creating a new layer.
-* One can launch multiple containers from a single docker image.
+* Docker Images-->Docker Image is like the template of a container, It is created in layers,Any new changes in the image results in creating a new layer,One can launch multiple containers from a single docker image.
 
-* Docker Containers-->
-* A Docker Container is a lightweight software environment.
-* It works on top of the underlying OS kernel.
-* It is small in size and therefore is highly portable.
-* It is created using the docker image.
+* Docker Containers-->A Docker Container is a lightweight software environment,It works on top of the underlying OS kernel,It is small in size and therefore is highly portable,It is created using the docker image.
 
-* Docker Volumes-->
-* Docker Containers cannot persist data.
-* To persist data in containers, we can use Docker Volume.
-* A Docker Volume can connect to multiple containers simultaneously.
-* If not created explicitly, a volume is automatically created when we create a container.
+* Docker Volumes-->Docker Containers cannot persist data, To persist data in containers, we can use Docker Volume,A Docker Volume can connect to multiple containers simultaneously,If not created explicitly, a volume is automatically created when we create a container.
 
-* Dockerfile-->
-* Dockerfile is a YAML file, which is used to create custom containers.
-* It can include commands that have to be run on the command line.
-* This Dockerfile can be used to build custom container images.
+* Dockerfile--> Dockerfile is a YAML file, which is used to create custom containers,It can include commands that have to be run on the command line,This Dockerfile can be used to build custom container images.
+
+  **Common Docker commands**
+
+ docker --version
+docker pull <image-name>
+docker images
+docker run <image-name>
+docker ps
+docker ps -a
+docker exec <container-id>
+docker stop <container-id>
+docker kill <container-id>
+docker rm <container-id>
+docker rmi <image-id>
+
+
 
 
 
