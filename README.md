@@ -40,7 +40,7 @@ Also:
 * Servers waste resources
 * Scaling is hard
 
-  Virtual Machines vs Docker
+**Virtual Machines vs Docker**
 
 Virtual Machines:
 - Heavy
@@ -148,7 +148,7 @@ What is Containerization?---> Application Containerization is an OS-level Virtua
                       |
     -----------------------------------------
     |                |                     |
-  Run              Stop                  Delete
+  Run                 Stop                    Delete
   
                       
 
@@ -179,6 +179,34 @@ What is Containerization?---> Application Containerization is an OS-level Virtua
 * **docker kill <container-id>** -->This command kills the conatiner by stopping its execution immediately. The difference between **docker kill** and **docker stop** : 'Docker stop' gives the container time to shutdown gracefully;whereas,in situations when it is taking too much time for getting the conatiner to stop,one can opt to kill it. Rg:docker kill 233e926091f3
 * **docker rm <container-id>** --> To Remove a stopped container from the system,we use the **rm** command eg:docker rm 233e926091f3
 * **docker rmi <image-id>** --> To remove an image from the system, we use the rmi command.
+
+**Dockerfile-Deepdive**
+
+A Dockerfile is a text file that contains a set of instructions used to automatically build a Docker image.
+
+It defines:
+
+* Which base image to use
+* What software to install
+* What files to copy
+* Which commands to run
+* How the container should start
+
+--> Using a Dockerfile, we can create custom Docker images in a repeatable and automated way.
+
+--> Docker reads the Dockerfile line by line and executes each instruction to build the image.
+
+In short:
+
+👉 Dockerfile = Blueprint of a Docker Image
+
+FROM ubuntu - FROM defines the base image for the Docker image.
+RUN apt-get update - 
+RUN apt-get install -y apache2
+ADD . /var/www/html
+CMD apachectl -D FOREGROUND
+
+
 
   
 
