@@ -1,4 +1,4 @@
-Agenda
+**Agenda**
 
 * Explain the problem Docker solves
 * Virtual Machines vs Docker
@@ -26,8 +26,7 @@ So you install everything manually.
 
 😵 Problem:
 
-On your laptop → works
-On server → doesn’t work
+On your laptop → works, On server → doesn’t work
 
 Because:
 
@@ -52,6 +51,7 @@ Docker said - Why carry Full OS Every time?
 Instead: Use Host os Kernel and Only package: App+Libraries---> **These are called Containers**
 
 What is virtualization---> Virtualization is the process of running multiple virtual systems or resources on top of a single physical machine.These resources could be a storage device,network or even an operating system!!
+
 Eg: ### Virtual Machine Architecture
 
 ```
@@ -66,6 +66,101 @@ Eg: ### Virtual Machine Architecture
 +-------------------------------------+
               Hardware
 ```
+
+What is Containerization?---> Application Containerization is an OS-level Virtualization method used to deploy and run distributed applications without launching an entire virtual machine(VM)for each app.
+
+### Docker / Container Architecture
+
+```
++--------+    +--------+    +--------+
+| App 1  |    | App 2  |    | App 3  |
++--------+    +--------+    +--------+
+|Bins/Libs|   |Bins/Libs|   |Bins/Libs|
++------------------------------------+
+           Container Engine (Docker)
++------------------------------------+
+                    OS
++------------------------------------+
+                 Hardware
+```
+
+ ❌ Problems Before Containers
+
+* Code worked on developer system but failed in production
+
+* VMs consumed too many resources
+
+* VMs were large and hard to move
+
+* Environment mismatch
+
+✅ How Containers Solved These Problems
+
+* Lightweight
+
+* Portable
+
+* Same environment everywhere
+
+* Developer friendly
+
+ 📦 Advantages of Containers
+
+* Not resource hungry
+
+* Small in size
+
+* Highly portable
+
+* Easy configuration using code
+
+**🔧 Containerization Tools** --> MESOS,rkt,docker- Docker is clearly the most famous among them all!
+
+**What is Docker?** --> Docker is a computer program that performs operating system level virtualization,also known as **Containerization**. It was first released in 2013 and developed by docker,Inc.Docker is used to run software packages called **Containers**.
+
+          Docker container life cycle
+
+                 Docker Hub
+                      ▲
+                      | Push
+                      |
+                  Pull|
+                      ▼
+                Docker Engine
+                      |
+                 Docker Images
+                      |
+                   Containers
+                      |
+    -----------------------------------------
+    |                |                     |
+  Run              Stop                  Delete
+    |                                     |
+    ---------------------------------------
+                      |
+                   Build Image
+                      |
+                   Dockerfile
+
+🌐 Components of Docker Ecosystem
+
+* Docker Hub
+
+* Docker Engine
+
+* Docker Images
+
+* Docker Containers
+
+* Docker Volumes
+
+* Dockerfile
+
+
+
+
+
+
 
 
             
